@@ -1,5 +1,6 @@
 
 import ListGroup from './components/ListGroup';
+import Alert from './components/Alert';
 
 
 function App() {
@@ -13,7 +14,19 @@ function App() {
   return (
     <div>
            <ListGroup cats={cats}  heading="MY BEST FRIENDS"/>
+           <Alert>
+            The Cat Has Found! 
+            <span>
+            Here is the victory
+            </span>
+           
+           </Alert>
+          
      </div>
+
+     
+      
+     
   );
   
  

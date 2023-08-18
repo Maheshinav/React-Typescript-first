@@ -1,11 +1,10 @@
 import { useState } from "react";
-interface Props{
-    cats:string[];
-    heading:string;
+interface Props {
+	cats: string[];
+	heading: string;
 }
 
-function ListGroup( {cats,heading}:Props) {
-	
+function ListGroup({ cats, heading }: Props) {
 	const [selectedIndex, setSelectedIndex] = useState(-1);
 	const [name, setName] = useState("");
 	return (
