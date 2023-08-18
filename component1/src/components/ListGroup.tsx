@@ -1,18 +1,16 @@
 import { useState } from "react";
+interface Props{
+    cats:string[];
+    heading:string;
+}
 
-function ListGroup() {
-	let cats = [
-		"Bengal Cats",
-		"Russian Blue",
-		"Munchkin",
-		"Persian",
-		"Turkish Angora",
-	];
-    const [selectedIndex, setSelectedIndex] = useState (-1);
-    const [name, setName]= useState("")
+function ListGroup( {cats,heading}:Props) {
+	
+	const [selectedIndex, setSelectedIndex] = useState(-1);
+	const [name, setName] = useState("");
 	return (
 		<>
-			<h1>MY CATS</h1>
+			<h1>{heading}</h1>
 			<ul className="list-group">
 				{cats.map((cat, index) => (
 					<li
@@ -23,7 +21,7 @@ function ListGroup() {
 						}
 						key={cat}
 						onClick={() => {
-							setSelectedIndex (index);
+							setSelectedIndex(index);
 						}}
 					>
 						{cat}

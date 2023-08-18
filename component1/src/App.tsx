@@ -3,9 +3,16 @@ import ListGroup from './components/ListGroup';
 
 
 function App() {
+  let cats = [
+		"Bengal",
+		"Russian Blue",
+		"Munchkin",
+		"Persian",
+		"Turkish Angora",
+	];
   return (
     <div>
-           <ListGroup/>
+           <ListGroup cats={cats}  heading="MY BEST FRIENDS"/>
      </div>
   );
   
