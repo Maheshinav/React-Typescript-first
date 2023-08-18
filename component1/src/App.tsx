@@ -2,9 +2,11 @@
 import ListGroup from './components/ListGroup';
 import Alert from './components/Alert';
 import Button from './components/Button';
+import { useState } from 'react';
 
 
 function App() {
+  const [alertVisible, setAlertVisibility] = useState (false);
   let cats = [
 		"Bengal",
 		"Russian Blue",
@@ -15,15 +17,15 @@ function App() {
   return (
     <div>
            <ListGroup cats={cats}  heading="MY BEST FRIENDS"/>
-           <Alert>
+           { alertVisible && <Alert onClose={()=>setAlertVisibility(false)}>
             We saved the Cat Queen! 
             <span>
             Here is the victory brothers!!
             </span>
            
-           </Alert>
+           </Alert>}
 
-           <Button onClick={()=>console.log("Released the Army")}>Release the Black Ninjas</Button>
+           <Button onClick={()=>setAlertVisibility(true)}>Release the Black Ninjas</Button>
            
           
      </div>
