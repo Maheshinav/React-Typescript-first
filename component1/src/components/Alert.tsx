@@ -1,12 +1,13 @@
 import { ReactNode } from "react";
 import { useState } from "react";
+import {AiFillHeart} from 'react-icons/ai';
 
 interface Props {
 	children: ReactNode;
-    onClose: ()=> void;
+	onClose: () => void;
 }
 
-const Alert = ({ children,onClose }: Props) => {
+const Alert = ({ children, onClose }: Props) => {
 	return (
 		<>
 			<hr className="hr" />
@@ -17,7 +18,7 @@ const Alert = ({ children,onClose }: Props) => {
 					className="btn-close"
 					data-bs-dismiss="alert"
 					aria-label="Close"
-                    onClick={onClose}
+					onClick={onClose}
 				></button>
 			</div>
 		</>
