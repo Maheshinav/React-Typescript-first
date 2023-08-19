@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import { useState } from "react";
-import {AiFillHeart} from 'react-icons/ai';
+import Like from './Like';
+
+
 
 interface Props {
 	children: ReactNode;
@@ -20,6 +22,7 @@ const Alert = ({ children, onClose }: Props) => {
 					aria-label="Close"
 					onClick={onClose}
 				></button>
+				<Like/>
 			</div>
 		</>
 	);
