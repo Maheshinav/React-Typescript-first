@@ -1,8 +1,6 @@
 import { ReactNode } from "react";
 import { useState } from "react";
-import Like from './Like';
-
-
+import Like from "./Like";
 
 interface Props {
 	children: ReactNode;
@@ -22,7 +20,7 @@ const Alert = ({ children, onClose }: Props) => {
 					aria-label="Close"
 					onClick={onClose}
 				></button>
-				<Like/>
+				<Like />
 			</div>
 		</>
 	);

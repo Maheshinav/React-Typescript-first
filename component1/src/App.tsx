@@ -2,8 +2,7 @@ import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import { useState } from "react";
-import {FaCat} from 'react-icons/fa';
-
+import { FaCat } from "react-icons/fa";
 
 function App() {
 	const [alertVisible, setAlertVisibility] = useState(false);
@@ -16,8 +15,8 @@ function App() {
 	];
 	return (
 		<div>
-			<ListGroup cats={cats} heading="MY BEST FRIENDS"/>
-			<FaCat color="#fb6834" size={40}/>
+			<ListGroup cats={cats} heading="MY BEST FRIENDS" />
+			<FaCat color="#fb6834" size={40} />
 			{alertVisible && (
 				<Alert onClose={() => setAlertVisibility(false)}>
 					We saved the Cat Queen!
